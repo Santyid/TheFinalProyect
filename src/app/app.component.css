@@ -1,5 +1,4 @@
 #intro {
-	text-align: center;
 	display: block;
 	width: 900px;
 	margin: 5px 0 0 0;
@@ -7,6 +6,33 @@
 	color: #666666;
 	background-color: #f0f0f0;
 	font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+#texto input {
+	text-align: center;
+	margin-top: .5em;
+	width: 500px;
+	padding: 5px;
+	color: #333333;
+	background-color: #ffffff;
+	border: 3px solid #999999;
+}
+
+#texto {
+	text-align: center;
+}
+
+#checkbox2 {
+	margin-left: 50px;
+}
+
+input {
+	display: inline-block;
+	width: 19px;
+	height: 19px;
+	margin: -1px 4px 0 0;
+	vertical-align: middle;
+	cursor: pointer;
 }
 
 #intro2 {
@@ -47,21 +73,18 @@ table tbody tr.dark {
 	background-color: #e8e8e8;
 }
 
-#intro input {
-	text-align: center;
-	margin-top: .5em;
-	width: 500px;
-	padding: 5px;
-	color: #333333;
-	background-color: #ffffff;
-	border: 3px solid #999999;
-}
-
-#intro2 h1 {
+#intro2 h4 {
 	text-align: left;
 }
 
-intro2 readmore {
-	text-align: right;
-	top: 50px;
+#intro2 button {
+	border: none;
+	background: #577b8d;
+	color: #f2f2f2;
+	padding: 10px;
+	font-size: 13px;
+	border-radius: 5px;
+	position: relative;
+	box-sizing: border-box;
+	transition: all 500ms ease;
 }

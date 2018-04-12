@@ -35,11 +35,9 @@ export class AppComponent {
 		this.todosService.changeStatu(id, status);
 	}
 
-	deleteTodo(id: string) {
-		this.todosService.deleteTodo(id);
-		console.log(id);
+	changeStatusAll(status: boolean) {
+		this.todosService.changeStatusAll(this.todos$, status);
 	}
-
 	statusTrue() {
 		this.todosService.selectTodos().subscribe((content) => {
 			this.todos$ = content;
@@ -57,5 +55,9 @@ export class AppComponent {
 		this.todos$ = this.todos$.filter((todo) => todo.status == true);
 		this.todosService.deleteStatusTrue(this.todos$);
 		this.allTodos();
+	}
+	deleteTodo(id: string) {
+		this.todosService.deleteTodo(id);
+		console.log(id);
 	}
 }

@@ -20,12 +20,18 @@ export class TodoService {
 		this.db.collection('todos').doc(id).update({ status });
 	}
 
+	changeStatusAll(todo: Todo[], status: boolean) {
+		for (const todos of todo) {
+			this.db.collection('todos').doc(todos.id).update({ status });
+		}
+	}
+
 	deleteTodo(id: string) {
 		this.db.collection('todos').doc(id).delete();
 	}
 
-	deleteStatusTrue(to: Todo[]) {
-		for (const todos of to) {
+	deleteStatusTrue(todo: Todo[]) {
+		for (const todos of todo) {
 			this.db.collection('todos').doc(todos.id).delete();
 		}
 	}

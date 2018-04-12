@@ -1,52 +1,43 @@
 <div id="intro">
-            <input type="text" placeholder="What needs to be done?"
-            (keydown.enter)="addWord($event.target)" >
+
+
+    <div id="checkbox2">
+        <input type="checkbox"
+               (change)="changeStatusAll($event.target.checked)">
+    </div>
+
+    <div id="texto">
+        <input type="text"
+               placeholder="What needs to be done?"
+               (keydown.enter)="addWord($event.target)">
+    </div>
+
+
 </div>
-<div id="intro2">    
-            
+<div id="intro2">
 
-            <div  *ngFor="let todo of todos$"> 
-     
-                 <table class="racete" id="racetimes"
-                 border=" 2px">
-      
-                     <tr>
-                     <input type="checkbox" [checked]="todo.status" (change)="changeStatu(todo.id, $event.target.checked)">
-                     <td> {{todo.word}}</td>
-                     <button (click)="deleteTodo(todo.id)"> Delete </button>        
-                     
-                     
-                     
-      
-                     </tr>
-                 </table>
-                 </div>
+    <div *ngFor="let todo of todos$">
 
-                
+        <table class="racete"
+               id="racetimes"
+               border=" 2px">
 
-                 <h1>{{countTodos}} item left</h1>                           
-                 <button (click)="allTodos()"> All </button>
-                 <button (click)="statusTrue()"> Completed </button>
-                 <button (click)="statusFalse()"> Active </button>
-                 <button (click)="deleteStatusTrue()"> Clear completed </button>
-
-</div>            
-               
-
-        
+            <tr>
+                <input type="checkbox"
+                       [checked]="todo.status"
+                       (change)="changeStatu(todo.id, $event.target.checked)">
+                <td> {{todo.word}}</td>
+                <button (click)="deleteTodo(todo.id)"> Delete </button>
+            </tr>
+        </table>
+    </div>
 
 
+    <h4>{{countTodos}} item left</h4>
+    <button (click)="allTodos()"> All </button>
+    <button (click)="statusFalse()"> Active </button>
+    <button (click)="statusTrue()"> Completed </button>
 
+    <button (click)="deleteStatusTrue()"> Clear completed </button>
 
-
-
-        
-        
-
- 
-
-
-
-
-
-
+</div>
