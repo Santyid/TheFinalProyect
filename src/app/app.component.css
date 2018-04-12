@@ -1,0 +1,67 @@
+#intro {
+	text-align: center;
+	display: block;
+	width: 900px;
+	margin: 5px 0 0 0;
+	padding: 30px;
+	color: #666666;
+	background-color: #f0f0f0;
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+#intro2 {
+	text-align: center;
+	display: block;
+	width: 900px;
+	margin: 5px 0 0 0;
+	padding: 30px;
+	color: #666666;
+	background-color: #f0f0f0;
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+table {
+	margin-top: .5em;
+	width: 100%;
+	border-collapse: collapse;
+	margin-bottom: 15px;
+	border: 1px solid #cccccc;
+}
+
+table tbody td {
+	border-collapse: collapse;
+	border-left: 1px solid #cccccc;
+	border-right: 1px solid #cccccc;
+}
+table thead th,
+table tbody td {
+	padding: 5px;
+	border-collapse: collapse;
+}
+table tbody tr.light {
+	color: #666666;
+	background-color: #f7f7f7;
+}
+table tbody tr.dark {
+	color: #666666;
+	background-color: #e8e8e8;
+}
+
+#intro input {
+	text-align: center;
+	margin-top: .5em;
+	width: 500px;
+	padding: 5px;
+	color: #333333;
+	background-color: #ffffff;
+	border: 3px solid #999999;
+}
+
+#intro2 h1 {
+	text-align: left;
+}
+
+intro2 readmore {
+	text-align: right;
+	top: 50px;
+}
